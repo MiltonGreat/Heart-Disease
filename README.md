@@ -1,4 +1,4 @@
-# Heart-Disease
+# Heart Disease Classification
 
 ### Summary and Recommendations
 
