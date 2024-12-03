@@ -47,11 +47,16 @@ The target variable is HeartDisease, which indicates whether or not a patient ha
 
 #### 4. Key Findings
       
-Model Performance: All three models (Logistic Regression, Random Forest, and SVM) performed similarly in terms of accuracy (~86%) and AUC (>0.92), making them reliable predictors for heart disease. SVM and Logistic Regression slightly outperformed Random Forest in terms of ROC-AUC.
+All three models (Logistic Regression, Random Forest, and SVM) performed similarly in terms of accuracy (~86%) and AUC (>0.92), making them reliable predictors for heart disease. SVM and Logistic Regression slightly outperformed Random Forest in terms of ROC-AUC.
 
-Feature Importance: The Random Forest model revealed that features like MaxHR, Cholesterol, and Age had the most impact on predicting heart disease, providing valuable insights into the most important factors influencing heart disease risk.
+The Random Forest model revealed that features like MaxHR, Cholesterol, and Age had the most impact on predicting heart disease, providing valuable insights into the most important factors influencing heart disease risk.
 
-Patient Prediction: The final part of the code uses the best model to predict heart disease for a new patient. For example:
+Interpretation of Results: 
+
+- The high accuracy and strong performance metrics across classes (e.g., normal and opacity) suggest that the model is well-suited for identifying both at-risk and non-at-risk patients.
+- The use of Chest X-Ray images as inputs means the model is leveraging visual patterns, which are highly relevant for clinical diagnoses of conditions like pneumonia or other causes of mortality.
+
+The final part of the code uses the best model to predict heart disease for a new patient. For example:
 
 - Patient Info: 52 years old, RestingBP of 138, Cholesterol of 175, and MaxHR of 125.
 - Prediction: The model predicts that the patient has heart disease.
