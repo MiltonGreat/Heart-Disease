@@ -1,5 +1,36 @@
 # Heart Disease Classification
 
+### Problem Statement
+
+Heart disease remains a leading cause of death; early prediction can save lives.
+
+### Solution Approach:
+
+Data: Heart Disease dataset with features like age, cholesterol, and blood pressure.
+
+Methods:
+
+- Trained Logistic Regression, Random Forest, and SVM models.
+- Conducted EDA to identify correlations (e.g., cholesterol levels with heart risk).
+- Evaluated models using ROC-AUC and precision-recall metrics.
+- Tools: Python (Scikit-learn, Matplotlib), Tableau.
+
+### Results
+
+Achieved 89% accuracy with Random Forest, highlighting high-risk patients.
+
+### Challenges
+
+Addressing class imbalance in the dataset.
+
+### Future Directions
+
+Incorporate time-series data for monitoring patient vitals.
+
+### Key Skills
+
+Predictive modeling, feature engineering, data visualization, Python.
+
 ### Summary and Recommendations
 
 #### 1. Overview
