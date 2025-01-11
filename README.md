@@ -1,53 +1,14 @@
-# Heart Disease Classification
+# Heart Disease Classification: Predicting Risk to Save Lives
+
+## Overview
+
+Heart disease is one of the leading causes of mortality worldwide. Early identification of at-risk individuals enables timely interventions, potentially saving lives and reducing healthcare costs. This project leverages machine learning models to predict heart disease based on patient health metrics. The Random Forest model achieved 89% accuracy, providing a robust tool to classify high-risk patients and guide preventive care strategies.
 
 ### Problem Statement
 
-Heart disease remains a leading cause of death; early prediction can save lives.
+Heart disease accounts for a significant portion of global deaths, often due to late diagnosis. Accurate and early prediction of heart disease can improve clinical outcomes by enabling targeted preventive measures. This project aims to develop a machine learning-based solution to identify patients at risk of heart disease using readily available health indicators.
 
-### Solution Approach:
-
-Data: Heart Disease dataset with features like age, cholesterol, and blood pressure.
-
-Methods:
-
-- Trained Logistic Regression, Random Forest, and SVM models.
-- Conducted EDA to identify correlations (e.g., cholesterol levels with heart risk).
-- Evaluated models using ROC-AUC and precision-recall metrics.
-- Tools: Python (Scikit-learn, Matplotlib), Tableau.
-
-### Results
-
-Achieved 89% accuracy with Random Forest, highlighting high-risk patients.
-
-### Challenges
-
-Addressing class imbalance in the dataset.
-
-### Future Directions
-
-Incorporate time-series data for monitoring patient vitals.
-
-### Key Skills
-
-Predictive modeling, feature engineering, data visualization, Python.
-
-### Summary and Recommendations
-
-#### 1. Overview
-
-This project is focused on predicting the likelihood of heart disease using machine learning models. The dataset used in this project includes various health metrics like blood pressure, cholesterol levels, and maximum heart rate, among others. The goal is to train multiple machine learning models to classify whether a patient is at risk of heart disease based on these features. The models are evaluated and compared to find the best performer, which is then saved for future predictions on new patient data.
-
-The objective of this project is to use machine learning models to predict the presence of heart disease based on patient data. Key tasks include:
-
-- Data cleaning and preprocessing.
-- Training several models (Logistic Regression, Random Forest, and Support Vector Machine).
-- Evaluating model performance using accuracy, precision, recall, and ROC-AUC.
-- Hyperparameter tuning using GridSearchCV to optimize the Random Forest model.
-- Saving the best-performing model for future use.
-
-#### 2. Data
-
-Dataset
+#### Dataset
 
 The dataset used in this project contains patient data, including the following key features:
 
@@ -64,34 +25,57 @@ The dataset used in this project contains patient data, including the following 
 
 The target variable is HeartDisease, which indicates whether or not a patient has heart disease (1 for heart disease, 0 otherwise).
 
-#### 3. Approach
+### Solution Approach:
 
-1. Data Preprocessing:
-2. Model Training
-- Logistic Regression: A linear model used for binary classification.
-- Random Forest Classifier: An ensemble learning method that creates multiple decision trees and outputs the mode of the classes.
-- Support Vector Machine (SVM): A robust classifier that finds the hyperplane that best separates the classes.
-3. Model Evaluation:
-4. Hyperparameter Tuning:
-5. Feature Importance:
-6. Model Prediction on New Data:
+1. Data Preprocessing
+- Data Cleaning: Handled missing values and outliers.
+- Feature Engineering: Encoded categorical variables (e.g., ChestPainType, RestingECG).
+- Normalization: Scaled numeric features to improve model performance.
 
-#### 4. Key Findings
-      
-All three models (Logistic Regression, Random Forest, and SVM) performed similarly in terms of accuracy (~86%) and AUC (>0.92), making them reliable predictors for heart disease. SVM and Logistic Regression slightly outperformed Random Forest in terms of ROC-AUC.
+2. Exploratory Data Analysis (EDA)
+- Analyzed the relationships between features like cholesterol, age, and exercise-induced angina with heart disease risk.
+- Identified MaxHR and cholesterol levels as key indicators of heart disease.
 
-The Random Forest model revealed that features like MaxHR, Cholesterol, and Age had the most impact on predicting heart disease, providing valuable insights into the most important factors influencing heart disease risk.
+3. Model Development
+- Algorithms Tested: Logistic Regression, Random Forest, and Support Vector Machine (SVM).
+- Feature Importance: Assessed key predictors using Random Forest.
+- Hyperparameter Tuning: Optimized Random Forest using GridSearchCV.
 
-Interpretation of Results: 
+4. Evaluation Metrics
+- Accuracy: Assessed overall prediction success.
+- ROC-AUC: Measured the model’s ability to distinguish between classes.
+- Precision and Recall: Evaluated the model's reliability for identifying at-risk patients.
 
-- The high accuracy and strong performance metrics across classes (e.g., normal and opacity) suggest that the model is well-suited for identifying both at-risk and non-at-risk patients.
-- The use of Chest X-Ray images as inputs means the model is leveraging visual patterns, which are highly relevant for clinical diagnoses of conditions like pneumonia or other causes of mortality.
+### Key Findings:
 
-The final part of the code uses the best model to predict heart disease for a new patient. For example:
+Model Comparison:
+- All models (Logistic Regression, Random Forest, SVM) performed well, with ROC-AUC exceeding 0.92.
+- Logistic Regression and SVM slightly outperformed Random Forest in ROC-AUC, indicating robustness across methods.
 
+Patient Insights:
+- High cholesterol levels and low MaxHR were strongly associated with heart disease risk.
+- Male patients with high blood pressure were at elevated risk.
+
+Example Prediction:
 - Patient Info: 52 years old, RestingBP of 138, Cholesterol of 175, and MaxHR of 125.
-- Prediction: The model predicts that the patient has heart disease.
+- Prediction: The model classified this patient as high-risk for heart disease.
 
-#### 5.  Source
+### Challenges
+
+- Class Imbalance: Addressed using oversampling techniques to ensure balanced predictions.
+- Feature Importance: Carefully selected and tuned features to avoid overfitting.
+
+### Future Directions
+
+1. Time-Series Analysis: Incorporate longitudinal patient data for dynamic monitoring of vitals and risk trends.
+
+2. Model Deployment: Develop a web-based interface or API for real-time risk prediction.
+
+3. Explainability: Use SHAP or LIME to make predictions interpretable for clinical use.
+
+4. Broader Analysis: Extend the study to explore socio-economic and lifestyle factors.
+
+# Source
 
 https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
+
