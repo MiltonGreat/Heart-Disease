@@ -2,7 +2,7 @@
 
 ## Overview
 
-Heart disease is one of the leading causes of mortality worldwide. Early identification of at-risk individuals enables timely interventions, potentially saving lives and reducing healthcare costs. This project leverages machine learning models to predict heart disease based on patient health metrics. The Random Forest model achieved 89% accuracy, providing a robust tool to classify high-risk patients and guide preventive care strategies.
+Heart disease is one of the leading causes of mortality worldwide. Early identification of at-risk individuals enables timely interventions, potentially saving lives and reducing healthcare costs. This project leverages machine learning models to predict heart disease based on patient health metrics. The Random Forest model achieved an 86% accuracy with a ROC-AUC of 0.92, providing a robust tool to classify high-risk patients and guide preventive care strategies.
 
 ### Problem Statement
 
@@ -42,9 +42,13 @@ The target variable is HeartDisease, which indicates whether or not a patient ha
 - Hyperparameter Tuning: Optimized Random Forest using GridSearchCV.
 
 4. Evaluation Metrics
-- Accuracy: Assessed overall prediction success.
-- ROC-AUC: Measured the model’s ability to distinguish between classes.
-- Precision and Recall: Evaluated the model's reliability for identifying at-risk patients.
+- Accuracy: 86% accuracy on the test set.
+- ROC-AUC: 0.92, indicating the model's ability to distinguish between heart disease and no heart disease.
+
+Precision and Recall:
+- Precision: 0.91 (for heart disease cases).
+- Recall: 0.84 (for heart disease cases).
+- F1-score: 0.87.
 
 ### Key Findings:
 
@@ -62,7 +66,9 @@ Example Prediction:
 
 ### Challenges
 
-- Class Imbalance: Addressed using oversampling techniques to ensure balanced predictions.
+![screenshot-localhost_8890-2025 01 30-15_35_15](https://github.com/user-attachments/assets/67302e76-1537-422a-9a70-91cee9984a2b)
+
+- Class Imbalance: Addressed using oversampling techniques (SMOTE) to ensure balanced predictions.
 - Feature Importance: Carefully selected and tuned features to avoid overfitting.
 
 ### Future Directions
@@ -76,6 +82,8 @@ Example Prediction:
 4. Broader Analysis: Extend the study to explore socio-economic and lifestyle factors.
 
 # Source
+
+Dataset: [Heart Failure Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
 
 https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
 
