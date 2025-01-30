@@ -85,5 +85,3 @@ Example Prediction:
 
 Dataset: [Heart Failure Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
 
-https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
-
