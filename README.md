@@ -1,4 +1,4 @@
-# Heart Disease Classification: Predicting Risk to Save Lives
+# Heart Disease Classification
 
 ## Overview
 
